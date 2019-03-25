@@ -89,7 +89,7 @@ Server: Docker Engine - Community
 # What is a container?
 
 - Contains application state
-- Thin read-write layer
+- Thin read/write layer
 
 ---
 
@@ -101,7 +101,7 @@ Server: Docker Engine - Community
 
 ## Reading a file
 
-### go down the layers to find file
+### go down the layered File System, take first occurence
 
 ![left fit](container-layers.jpg)
 
@@ -109,21 +109,21 @@ Server: Docker Engine - Community
 
 ## Writing a file
 
-### Write in the container read/write layer
+### Write in the containers read/write layer
 
 ![left fit](container-layers.jpg)
 
 ---
 
-## Overwriting a file
+## Changing an existing file
 
-### create copy of read-only file in write layer first
+### create copy of read-only file in read/write layer first
 
 ![left fit](container-layers.jpg)
 
 ---
 
-# [Fit] An Image is reused in multiple containers
+# [Fit] An Image can be reused in multiple containers
 
 ![inline](sharing-layers.jpg)
 
@@ -145,6 +145,7 @@ FROM python:2.7-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
+# ignore files specified in .dockerignore
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
@@ -261,7 +262,6 @@ services:
 
 Will handle everything:
 
-- Creates a network
 - creates the containers `app` and `redis`
 - containers are part of the same network
 - containers have the correct host ports bound
