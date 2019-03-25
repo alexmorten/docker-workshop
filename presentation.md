@@ -33,11 +33,10 @@ theme: Courier, 6
 
 # Why Docker
 
-- Installing dependencies
-- Deploying Apps to production
+- Reproducibly installing dependencies
+- Deploying apps to production
 - Sharing useful components
 - Little overhead
-- Reproducability
 
 ---
 
@@ -246,6 +245,8 @@ How do I remember all of these commands?
 
 ---
 
+[.code: auto(1200)]
+
 ## [Fit] You define your setup in a `docker-compose.yml`
 
 ```yaml
@@ -261,7 +262,7 @@ services:
       - "6379:6379"
     volumes:
       - "./redis-data:/data"
-    command: redis-server --appendonly yes
+    command: "redis-server --appendonly yes"
 ```
 
 ---
@@ -332,7 +333,7 @@ volumes:
 
 `docker history <container name>`
 
-Examine size of each layer
+Examine size of each layer of the container
 
 ---
 
