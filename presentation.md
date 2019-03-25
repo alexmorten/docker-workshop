@@ -329,7 +329,23 @@ volumes:
 
 ---
 
-# Useful tricks
+# Useful things
+
+`docker run -d ...`
+
+Run docker container in background
+
+`docker ps`
+
+See all running docker containers
+
+`docker ps --all`
+
+See all docker containers that exist
+
+---
+
+# Useful things
 
 `docker history <container name>`
 
@@ -337,7 +353,7 @@ Examine size of each layer of the container
 
 ---
 
-# Useful tricks
+# Useful things
 
 `docker exec -it <container name> /bin/bash`
 
@@ -345,7 +361,7 @@ Get an interactive terminal inside a running container
 
 ---
 
-# Useful tricks
+# Useful things
 
 ## Multistage builds
 
