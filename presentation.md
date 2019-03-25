@@ -192,6 +192,14 @@ CMD ["python", "app.py"]
 
 ---
 
+# Cleanup
+
+`docker run --rm ...` will automatically remove the container after it is stopped
+
+-> especially helpful for stateless containers
+
+---
+
 # Containers run in isolated Networks
 
 -> no calls to things running on the host
