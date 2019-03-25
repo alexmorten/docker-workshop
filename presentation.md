@@ -322,9 +322,43 @@ volumes:
 
 # Useful tricks
 
-- `docker history <container name>`
-- `docker exec -it <container name> /bin/bash`
-- Multistage builds
+`docker history <container name>`
+
+Examine size of each layer
+
+---
+
+# Useful tricks
+
+`docker exec -it <container name> /bin/bash`
+
+Get an interactive terminal inside a running container
+
+---
+
+# Useful tricks
+
+## Multistage builds
+
+```Dockerfile
+# use the golang dev image to compile binary
+FROM golang:1.11 as builder
+WORKDIR /go/src/github.com/alexmorten/mhist
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -o mhist main/main.go
+
+# use the stripped down alpine image
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+RUN mkdir app
+# Copy the binary from the builder stage
+COPY --from=builder /go/src/github.com/alexmorten/mhist/mhist /app
+WORKDIR /app
+CMD ["./mhist"]
+EXPOSE 6666 6667
+```
+
+15MB tiny image
 
 ---
 
