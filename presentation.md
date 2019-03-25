@@ -401,3 +401,11 @@ Alpine images **don't** have that alias
 _Normally_ the OS contains ca-certificates to validate TLS certificates from servers for `https` calls
 
 -> ... you should `RUN apk --no-cache add ca-certificates`
+
+---
+
+# That's it!
+
+---
+
+# Thank you!
