@@ -210,15 +210,17 @@ CMD ["python", "app.py"]
 # Cleanup
 
 - `ctrl + c` cancel process running in terminal
-- `docker rm app` remove container
+- `docker ps --all` to see all existing containers
+- `docker start app` to start container again
+- `docker stop app` to stop container
 
 ---
 
 # Cleanup
 
-`docker run --rm ...` will automatically remove the container after it is stopped
-
--> especially helpful for stateless containers
+- `docker rm app` remove container
+- `docker run --rm ...` would have automatically removed the container after it is stopped
+  -> especially helpful for stateless containers
 
 ---
 
@@ -352,19 +354,14 @@ volumes:
 
 ---
 
+
+
+
 # Useful things
 
 `docker run -d ...`
 
 Run docker container in background
-
-`docker ps`
-
-See all running docker containers
-
-`docker ps --all`
-
-See all docker containers that exist
 
 ---
 
