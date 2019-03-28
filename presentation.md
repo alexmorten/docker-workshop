@@ -26,6 +26,7 @@ theme: Courier, 6
 # Things I planned to cover
 
 - Docker-Compose
+- Excercise with own projects
 - Useful tricks
 - Pitfalls when using Docker
 
