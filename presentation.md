@@ -12,6 +12,8 @@ theme: Courier, 6
 
 ---
 
+[.build-lists: true]
+
 # Things I planned to cover
 
 - Why Docker
@@ -22,6 +24,8 @@ theme: Courier, 6
   - Volumes
 
 ---
+
+[.build-lists: true]
 
 # Things I planned to cover
 
@@ -271,9 +275,9 @@ How do I remember all of these commands?
 
 ---
 
-[.code: auto(1200)]
+[.code: auto(1)]
 
-## [Fit] You define your setup in a `docker-compose.yml`
+## [Fit] Define your setup in a `docker-compose.yml`
 
 ```yaml
 version: "3"
