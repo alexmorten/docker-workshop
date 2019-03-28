@@ -451,3 +451,18 @@ _Normally_ the OS contains ca-certificates to validate TLS certificates from ser
 ---
 
 # Thank you!
+
+---
+
+# Links
+
+Docker Installation:
+`docs.docker.com/install/`
+`docs.docker.com/compose/install/`
+
+Example repo
+`github.com/alexmorten/docker-example`
+
+Slides:
+`docker.alexmorten.info` (PDF)
+`github.com/alexmorten/docker-workshop-presentation`
