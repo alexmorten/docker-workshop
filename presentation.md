@@ -50,9 +50,9 @@ theme: Courier, 6
 
 # Installation
 
-##[Fit] https://docs.docker.com/install/
+##[Fit] docs.docker.com/install/
 
-##[Fit] https://docs.docker.com/compose/install/
+##[Fit] docs.docker.com/compose/install/
 
 ---
 
