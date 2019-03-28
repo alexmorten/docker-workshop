@@ -90,8 +90,19 @@ docker-compose version 1.23.2, build 1110ad01
 
 # What is an image?
 
+- Blueprint
 - Contains everything necessary to run an application
 - A layered, read-only File System
+
+---
+
+[.build-lists: true]
+
+# Why layers?
+
+- Enable caching of shared requirements
+- Each layer has a globally unique id
+- only changed layers need to be pushed/pulled
 
 ---
 
