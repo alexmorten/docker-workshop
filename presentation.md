@@ -354,8 +354,13 @@ volumes:
 
 ---
 
+# Leads
 
+- What is my app supposed to do?
+- Is there an appropriate Base Image?
+- What dependencies do I need?
 
+---
 
 # Useful things
 
