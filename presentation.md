@@ -44,6 +44,8 @@ theme: Courier, 6
 
 ##[Fit] https://docs.docker.com/install/
 
+##[Fit] https://docs.docker.com/compose/install/
+
 ---
 
 ```bash
@@ -66,6 +68,13 @@ Server: Docker Engine - Community
   Built:            Sun Feb 10 04:13:06 2019
   OS/Arch:          linux/amd64
   Experimental:     false
+```
+
+---
+
+```bash
+docker-compose --version
+docker-compose version 1.23.2, build 1110ad01
 ```
 
 ---
