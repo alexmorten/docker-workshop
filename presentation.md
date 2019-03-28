@@ -31,11 +31,14 @@ theme: Courier, 6
 
 ---
 
-# Why Docker
+[.build-lists: true]
+
+# Why Docker?
 
 - Reproducibly installing dependencies
-- Deploying apps to production
-- Sharing useful components
+- Development very close to production
+- Easily deploying apps
+- Ecosystem of useful, shared components
 - Little overhead
 
 ---
