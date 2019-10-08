@@ -190,6 +190,26 @@ CMD ["python", "app.py"]
 
 ---
 
+`FROM <image>`
+
+Specifies what image to use as a base
+
+---
+
+`COPY <host path> <image path>`
+
+Copy file/directory from host directory to directory in image layer
+
+---
+
+`RUN <command>`
+
+Runs the given command in a container
+
+All changes to the filesystem are stored in a new image layer
+
+---
+
 [.build-lists: true]
 
 # Build the image
@@ -197,6 +217,8 @@ CMD ["python", "app.py"]
 `docker build -t example-app .`
 
 - `-t` tags the image with a nice name
+- use `.` as the build context directory
+  -> the host root path used for `COPY`
 
 ---
 
@@ -353,9 +375,11 @@ volumes:
 
 # Exercise
 
-1. Pick one of your projects (ideally with some kind of Database)
-1. Write a `Dockerfile` for it
-1. Write a `docker-compose.yaml` including all services your app depends on
+1. Pick one of your projects
+   - ideally with some kind of Database
+   - or just use [this](https://github.com/jpetazzo/wordsmith)
+2. Write a `Dockerfile` for each component
+3. Write a `docker-compose.yaml` including all services
 
 ---
 
